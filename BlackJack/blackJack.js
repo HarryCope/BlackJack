@@ -6,6 +6,8 @@ var deck = new Array();
 var playerHand = [];
 var compHand = [];
 var randInt = 0;
+var spliceDeck = [];
+
 
 
 function createDeck() {
@@ -24,9 +26,10 @@ function createDeck() {
 }
 
 function randomCard(deck){  
+spliceDeck = [];
 const randInt = Math.floor(Math.random()*deck.length);
-//deck.splice(randInt,randInt);
-return deck[randInt];
+spliceDeck = deck.splice(randInt,1);
+return spliceDeck;
 }
 
 function removeCard(deck){
@@ -54,4 +57,5 @@ compHand.push(randomCard(deck))
 compHand.push(randomCard(deck))
 console.log(playerHand)
 console.log(compHand)
+console.log(deck);
 
