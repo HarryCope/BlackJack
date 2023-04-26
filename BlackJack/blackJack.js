@@ -5,6 +5,7 @@ var values = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
 var deck = new Array();
 var playerHand = [];
 var compHand = [];
+var randInt = 0;
 
 
 function createDeck() {
@@ -23,7 +24,13 @@ function createDeck() {
 }
 
 function randomCard(deck){  
-return deck[Math.floor(Math.random()*deck.length)];    
+const randInt = Math.floor(Math.random()*deck.length);
+//deck.splice(randInt,randInt);
+return deck[randInt];
+}
+
+function removeCard(deck){
+    deck.splice();
 }
 
 createDeck()
@@ -47,3 +54,4 @@ compHand.push(randomCard(deck))
 compHand.push(randomCard(deck))
 console.log(playerHand)
 console.log(compHand)
+
